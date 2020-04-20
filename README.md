@@ -1,1 +1,1 @@
-# is2
+R scripts for Intelligent Systems 2 module.
