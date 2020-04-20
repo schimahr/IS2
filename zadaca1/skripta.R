@@ -31,10 +31,10 @@ library(tidyverse)
 # a) Utjecaj varijable quizzes na ocjenu
 
 pA <- ggplot(data = edukacija, aes(edukacija$quizzes,edukacija$grade,colour=edukacija$grade))
-pA <- p + geom_point()
-pA <- p + ggtitle("Odnos bodova ostvarenih na kvizu na ocjenu")
-pA <- p + labs(y="Ocjena", x="Bodovi na kvizu", colour = "Ocjena")
-print(p)
+pA <- pA + geom_point()
+pA <- pA + ggtitle("Odnos bodova ostvarenih na kvizu na ocjenu")
+pA <- pA + labs(y="Ocjena", x="Bodovi na kvizu", colour = "Ocjena")
+print(pA)
 
 # b) Utjecaj varijable quizzes u kombinaciji s ostalim varijablama
 
