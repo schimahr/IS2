@@ -19,8 +19,8 @@ library(tree)
 edukacija$grade <- as.factor(edukacija$grade)
 set.seed(100)
 drvce <- tree(edukacija$grade~.-edukacija$grade, data=edukacija)
-#plot(drvce)
-#text(drvce, pretty=0)
+plot(drvce)
+text(drvce, pretty=0)
 
 # priprema seta za treniranje i testiranje
 setTreniranje = sample(1:nrow(edukacija),50)
@@ -30,8 +30,8 @@ setTestiranje.ocjena = edukacija$grade[-setTreniranje]
 # stablo odluke za subset treniranje
 set.seed(100)
 drvce1 <- tree(edukacija$grade~.-edukacija$grade, data=edukacija, subset = setTreniranje)
-#plot(drvce1)
-#text(drvce1, pretty=0)
+plot(drvce1)
+text(drvce1, pretty=0)
 
 # predikcija na temelju stabla odluke
 drvce.predikcija <- predict(drvce, setTestiranje, type="class")
